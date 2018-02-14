@@ -26,9 +26,7 @@ class ExampleSpec extends MixedPlaySpec {
               "<body>" +
               "<input type='button' name='b' value='Click Me' onclick='document.title=\"scalatest\"' />" +
               "</body>" +
-              "</html>"
-          ).as("text/html")
-        )
+              "</html>").as("text/html"))
     }).build()
 
   def getConfig(key: String)(implicit app: Application) = app.configuration.getOptional[String](key)
@@ -207,7 +205,7 @@ class ExampleSpec extends MixedPlaySpec {
     }
   }
 
-  // If a test does not need any special fixtures, just 
+  // If a test does not need any special fixtures, just
   // write "in { () => ..."
   "Any old thing" must {
     "be doable without much boilerplate" in { () =>

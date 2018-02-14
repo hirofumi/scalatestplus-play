@@ -206,8 +206,7 @@ trait AllBrowsersPerSuite extends TestSuiteMixin with WebBrowser with Eventually
       InternetExplorerInfo,
       ChromeInfo,
       HtmlUnitInfo(true),
-      PhantomJSInfo()
-    )
+      PhantomJSInfo())
 
   private var privateWebDriver: WebDriver = UninitializedDriver
 
@@ -320,8 +319,7 @@ trait AllBrowsersPerSuite extends TestSuiteMixin with WebBrowser with Eventually
               closeWebDriverIfNecessary()
               b.createWebDriver()
             },
-            Some(b.name)
-          )
+            Some(b.name))
         case None =>
           closeWebDriverIfNecessary()
           (UnneededDriver, None)

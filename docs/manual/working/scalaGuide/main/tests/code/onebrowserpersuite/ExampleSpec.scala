@@ -26,9 +26,7 @@ class ExampleSpec extends PlaySpec with GuiceOneServerPerSuite with OneBrowserPe
               "<body>" +
               "<input type='button' name='b' value='Click Me' onclick='document.title=\"scalatest\"' />" +
               "</body>" +
-              "</html>"
-          ).as("text/html")
-        )
+              "</html>").as("text/html"))
     }).build()
 
   "The OneBrowserPerTest trait" must {

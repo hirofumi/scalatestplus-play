@@ -253,8 +253,7 @@ class AllBrowsersPerSuiteBehaviorSpec extends WordSpec {
       class FirefoxTestSpec extends TestSpec {
         override lazy val browsers: IndexedSeq[BrowserInfo] =
           Vector(
-            FirefoxInfo(firefoxProfile)
-          )
+            FirefoxInfo(firefoxProfile))
       }
 
       val expectedTestStartingCount = 3
@@ -279,8 +278,7 @@ class AllBrowsersPerSuiteBehaviorSpec extends WordSpec {
       class SafariTestSpec extends TestSpec {
         override lazy val browsers: IndexedSeq[BrowserInfo] =
           Vector(
-            SafariInfo
-          )
+            SafariInfo)
       }
 
       val expectedTestStartingCount = 3
@@ -304,8 +302,7 @@ class AllBrowsersPerSuiteBehaviorSpec extends WordSpec {
       class InternetExplorerTestSpec extends TestSpec {
         override lazy val browsers: IndexedSeq[BrowserInfo] =
           Vector(
-            InternetExplorerInfo
-          )
+            InternetExplorerInfo)
       }
 
       val expectedTestStartingCount = 3
@@ -329,8 +326,7 @@ class AllBrowsersPerSuiteBehaviorSpec extends WordSpec {
       class ChromeTestSpec extends TestSpec {
         override lazy val browsers: IndexedSeq[BrowserInfo] =
           Vector(
-            ChromeInfo
-          )
+            ChromeInfo)
       }
 
       val expectedTestStartingCount = 3
@@ -354,8 +350,7 @@ class AllBrowsersPerSuiteBehaviorSpec extends WordSpec {
       class HtmlUnitTestSpec extends TestSpec {
         override lazy val browsers: IndexedSeq[BrowserInfo] =
           Vector(
-            HtmlUnitInfo(true)
-          )
+            HtmlUnitInfo(true))
       }
 
       val expectedTestStartingCount = 3

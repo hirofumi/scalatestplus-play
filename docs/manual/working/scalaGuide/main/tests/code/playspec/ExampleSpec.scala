@@ -29,9 +29,7 @@ class ExampleSpec extends PlaySpec with GuiceOneServerPerSuite with ScalaFutures
               "<body>" +
               "<input type='button' name='b' value='Click Me' onclick='document.title=\"scalatest\"' />" +
               "</body>" +
-              "</html>"
-          ).as("text/html")
-        )
+              "</html>").as("text/html"))
     }).build()
 
   "WsScalaTestClient's" must {

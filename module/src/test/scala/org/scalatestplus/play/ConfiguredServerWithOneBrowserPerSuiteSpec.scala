@@ -24,8 +24,7 @@ import play.api.inject.guice._
 import play.api.routing._
 
 class ConfiguredServerWithOneBrowserPerSuiteSpec extends Suites(
-  new ConfiguredServerWithOneBrowserPerSuiteNestedSpec
-) with GuiceOneServerPerSuite with TestSuite {
+  new ConfiguredServerWithOneBrowserPerSuiteNestedSpec) with GuiceOneServerPerSuite with TestSuite {
   override def fakeApplication(): Application =
     new GuiceApplicationBuilder().configure("foo" -> "bar", "ehcacheplugin" -> "disabled").router(TestRoutes.router).build()
 }

@@ -28,8 +28,7 @@ class NestedExampleSpec extends Suites(
   new OneSpec,
   new TwoSpec,
   new RedSpec,
-  new BlueSpec
-) with TestSuite with GuiceOneServerPerSuite with OneBrowserPerSuite with FirefoxFactory {
+  new BlueSpec) with TestSuite with GuiceOneServerPerSuite with OneBrowserPerSuite with FirefoxFactory {
   // Override app if you need an Application with other than non-default parameters.
   override def fakeApplication(): Application =
     new GuiceApplicationBuilder().configure("foo" -> "bar", "ehcacheplugin" -> "disabled").router(TestRoutes.router).build()
