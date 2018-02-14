@@ -20,12 +20,12 @@ import interplay.ScalaVersions._
 
 resolvers ++= DefaultOptions.resolvers(snapshot = true)
 
-val PlayVersion = playVersion("2.6.5")
+val PlayVersion = playVersion("2.6.11")
 
-val ScalatestVersion = "3.0.4"
-val SeleniumVersion = "3.5.3"
-val HtmlUnitVersion = "2.27"
-val PhantomJsDriverVersion = "1.4.3"
+val ScalatestVersion = "3.0.5"
+val SeleniumVersion = "3.9.1"
+val HtmlUnitVersion = "2.29.1"
+val PhantomJsDriverVersion = "1.4.4"
 val MockitoVersion = "2.7.22"
 
 lazy val commonSettings = Seq(
