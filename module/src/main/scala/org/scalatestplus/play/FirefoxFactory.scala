@@ -15,10 +15,8 @@
  */
 package org.scalatestplus.play
 
-import java.util.logging.Level
-
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.firefox.{ FirefoxBinary, FirefoxDriver, FirefoxOptions, FirefoxProfile }
+import org.openqa.selenium.firefox._
 import BrowserFactory.UnavailableDriver
 import org.openqa.selenium.remote.DesiredCapabilities
 
@@ -40,7 +38,7 @@ trait FirefoxFactory extends BrowserFactory {
    */
   lazy val firefoxProfile: FirefoxProfile = new FirefoxProfile()
 
-  lazy val firefoxOptions: FirefoxOptions = new FirefoxOptions().setLogLevel(Level.WARNING)
+  lazy val firefoxOptions: FirefoxOptions = new FirefoxOptions().setLogLevel(FirefoxDriverLogLevel.WARN)
 
   /**
    * Creates a new instance of a Selenium `FirefoxDriver` (using the `FirefoxProfile` provided by
@@ -78,9 +76,9 @@ object FirefoxFactory extends FirefoxFactory {
       val binary = new FirefoxBinary()
       new FirefoxDriver(options
         .setBinary(binary)
-        .setLogLevel(Level.WARNING)
+        .setLogLevel(FirefoxDriverLogLevel.WARN)
         .setProfile(firefoxProfile)
-        .addCapabilities(DesiredCapabilities.firefox()))
+        .merge(DesiredCapabilities.firefox()))
     } catch {
       case ex: Throwable => UnavailableDriver(Some(ex), Resources("cantCreateFirefoxDriver", ex.getMessage))
     }
